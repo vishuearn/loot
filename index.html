@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random</title>
+    <title>Redirect</title>
     <script>
-        // Telegram channel links
+        // Telegram links: 1 channel and 2 usernames
         const telegramLinks = [
-            "https://t.me/marryme18125", // Replace with your first Telegram channel link
-            "https://t.me/eeshaa_7", // Replace with your second Telegram channel link
-            "https://t.me/visalearning"  // Replace with your third Telegram channel link
+            "https://t.me/visalearning", // Replace with your Telegram channel link
+            "https://t.me/marryme18125",         // Replace with your first username link
+            "https://t.me/eeshaa_7"          // Replace with your second username link
         ];
 
-        // Function to randomly select a Telegram channel and redirect
-        function randomRedirect() {
-            const randomIndex = Math.floor(Math.random() * telegramLinks.length); // Randomly select an index
-            const selectedTelegramLink = telegramLinks[randomIndex]; // Get the link based on the random index
-            window.location.href = selectedTelegramLink; // Redirect to the selected Telegram channel
+        // Randomly select a link and redirect
+        function redirectToRandom() {
+            const randomIndex = Math.floor(Math.random() * telegramLinks.length); // Randomly select a link
+            const selectedLink = telegramLinks[randomIndex]; // Get the link based on the random index
+            window.location.href = selectedLink; // Redirect to the selected Telegram link
         }
+
+        // Call the redirect function on page load
+        window.onload = redirectToRandom;
     </script>
 </head>
-<body onclick="randomRedirect()">
-    <!-- Body click anywhere to redirect randomly -->
+<body>
+    <!-- Body is empty, will redirect automatically on page load -->
 </body>
 </html>
