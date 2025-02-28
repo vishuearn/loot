@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto Redirect</title>
-    <script type="text/javascript">
-        // Redirect immediately when the page loads
-       window.onload = function() {
-           window.location.href = "https://www.fokbook.com/V1C212?fbclid=PAY2xjawIbkG1leHRuA2FlbQIxMAABpv8ZRdyUzhc_ztLEp6yuv50Qr9wJiR58o6Wu9ojP3n_CWvY7R7rYL0G7W"; // Change this to the link you want
-          
-          // window.location.href = "https://t.me/visalearning";
-       
-       };
+    <title>Random</title>
+    <script>
+        // Telegram channel links
+        const telegramLinks = [
+            "https://t.me/marryme18125", // Replace with your first Telegram channel link
+            "https://t.me/eeshaa_7", // Replace with your second Telegram channel link
+            "https://t.me/visalearning"  // Replace with your third Telegram channel link
+        ];
 
-         
+        // Function to randomly select a Telegram channel and redirect
+        function randomRedirect() {
+            const randomIndex = Math.floor(Math.random() * telegramLinks.length); // Randomly select an index
+            const selectedTelegramLink = telegramLinks[randomIndex]; // Get the link based on the random index
+            window.location.href = selectedTelegramLink; // Redirect to the selected Telegram channel
+        }
     </script>
 </head>
-<body>
-    <!-- No content in the body -->
+<body onclick="randomRedirect()">
+    <!-- Body click anywhere to redirect randomly -->
 </body>
 </html>
