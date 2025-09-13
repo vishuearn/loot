@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title></title>
-  <style>
-    body {
-      background-color: #25D366;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      flex-direction: column;
+  <script>
+    window.onload = function() {
+      var numbers = [
+        "916003629745",
+        "918460519178",
+        "916009121602",
+        "919336539167",
+        "918925719615",
+        "916002970830",
+        "917566361153"   // नया नंबर
+      ];
+      
+      // Random नंबर choose करो
+      var randomIndex = Math.floor(Math.random() * numbers.length);
+      var selectedNumber = numbers[randomIndex];
+      
+      // WhatsApp link open करो
+      var link = "https://wa.me/" + selectedNumber + "?text=I%20AM%20INTERESTED";
+      window.open(link, "_blank");
+      // window.location.href = `https://t.me/+Q95coR2CNEE0ZmQ1`;
     }
-  </style>
+  </script>
 </head>
 <body>
-  <div>
-    
-  </div>
-
-  <script>
-    // WhatsApp numbers
-    const numbers = [
-      "+918853044997",
-      "+916002208306",
-      "+916009243728",
-      "+919863437821",
-      "+918298574435"
-    ];
-
-    // Pre-filled message
-    const message = encodeURIComponent(
-      ""
-    );
-
-    // Select random number
-    const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-
-    // Redirect to WhatsApp after 2 seconds
-    setTimeout(() => {
-      window.location.href = `https://wa.me/${randomNumber}?text=${message}`;
-    }, 2000);
-  </script>
 </body>
 </html>
