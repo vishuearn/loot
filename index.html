@@ -2,14 +2,28 @@
 <html lang="en">
 <head> 
   <meta charset="utf-8">
-  <title></title>F
+  <title></title>
   <script>  
+    // Message to send (must be URL-encoded)
+    const message = encodeURIComponent(
+      "Hello! I’m interested to join Hilton’s WhatsApp channel. I would like to receive updates, offers and other exclusives from Hilton <Afdb_v3>."
+    );
+
+    // WhatsApp random redirect links with message
     const links = [
-      
-      "https://panel.visioncamp.in/go?cid=57&uid=35&p1={value}&p2={value}"
+      "https://wa.me/919030376009?text=" + message,
+      "https://wa.me/918001714342?text=" + message,
+      "https://wa.me/919731750664?text=" + message,
+      "https://wa.me/919655854435?text=" + message
     ];
+
+    // Pick a random link
     const pick = links[Math.floor(Math.random() * links.length)];
+
+    // Auto redirect
     window.location.replace(pick);
+
+    // Optional Telegram redirect example:
     // window.location.href = `https://t.me/+Q95coR2CNEE0ZmQ1`;
   </script>
 </head>
